@@ -1,0 +1,5 @@
+numpy
+scipy
+scikit-surgerynditracker
+keyboard
+opencv-python
