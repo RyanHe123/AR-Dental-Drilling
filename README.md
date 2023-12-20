@@ -7,7 +7,7 @@
 This repository contains the final project for EN.601.654 Introduction to Augmented Reality in Fall 2023 at Johns Hopkins University.
 
 <p >
-  <img width="300" height="400" src="./attachments/simulation.gif">
+  <img width="300" height="500" src="./attachments/simulation.gif">
 </p>
 
 
