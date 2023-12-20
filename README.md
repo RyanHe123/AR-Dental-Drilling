@@ -14,7 +14,7 @@ This repository contains the final project for EN.601.654 Introduction to Augmen
 
 ## Project Overview
 
-The project aims to develop an Augmented Reality (AR)-based Tooth Preparation System, providing dentists with a platform to practice tooth preparation procedures without the need for real or 3D-printed teeth.
+The project aims to develop an Augmented Reality (AR)-based Tooth Preparation System, providing dentists with a platform to practice tooth preparation procedures without needing real or 3D-printed teeth.
 
 <p align="center">
   <img width="400" height="200" src="./attachments/tooth_drilling.png">
@@ -32,7 +32,7 @@ This repository is organized into two Unity projects:
 1. `Calibration`.
 2. `Real-Time-System`.
 
-Each project includes a `python-scripts` folder containing Python code that needs to be executed before starting the Unity projects. Ensure that the required Python packages are installed by referring to the [requirements.txt](requirements.txt) file.
+Each project includes a `python-scripts` folder containing Python code that needs to be executed before starting the Unity projects. Please ensure the required Python packages are installed by referring to the [requirements.txt](requirements.txt) file.
 
 ## Prerequisites
 
@@ -42,27 +42,27 @@ Each project includes a `python-scripts` folder containing Python code that need
      - Remember to open Research Mode for Hololens to get access to sensor data.
 
 ### Software
-1. Unity Enviroment (recommanded Version: 2021.3.23)
+1. Unity Environment (recommended Version: 2021.3.23)
 2. Holographic Remoting App on Hololens.
 3. Python on PC (download required packages using `pip install -r requirements.txt`)
-4. ROM files of markers fixed on tooth model, Hololens and Dental handpiece.
+4. ROM files of markers fixed on tooth model, Hololens, and Dental handpiece.
 
 ## How to Run Code
 
 ### Calibration
 
-1. Open [HololensCalibration.py](./Calibration/python-scripts/HololensCalibration.py). Make sure the paths of the ROM files are correct and modify the HOST IP on line 18 to the IP address of your PC.
-2. Open the Calibration project in Unity, modify the IP address in [DataReceiver.cs](./Calibration/Assets/DataStreaming.cs) on line 16.
-3. Deploy the project on the Hololens.
+1. Open [HololensCalibration.py](./Calibration/python-scripts/HololensCalibration.py). Make sure the paths of the ROM files are correct, and modify the HOST IP on line 18 to the IP address of your PC.
+2. Open the Calibration project in Unity and modify the IP address in [DataReceiver.cs](./Calibration/Assets/DataStreaming.cs) on line 16.
+3. Build and deploy the project on the Hololens.
 4. Remember to run the [HololensCalibration.py](./Calibration/python-scripts/HololensCalibration.py) first and run the Calibration project on Hololens.
-5. When you see stable tracking of the tooth model, you can keep pressing keyboard `K` to start recording transformation information until there is a `Recording` printed in the terminal. If you want to stop collecting data, press the keyboard `Q`. The script will print the output transformation that you can directly paste into [ToothDrilling.py](./Real-Time-System/python-scripts/ToothDrilling.py) on sline 40.
+5. When you see stable tracking of the tooth model, you can keep pressing the keyboard `K` to start recording transformation information until a `Recording` is printed in the terminal. If you want to stop collecting data, press the keyboard `Q`. The script will print the output transformation you can directly paste into [ToothDrilling.py](./Real-Time-System/python-scripts/ToothDrilling.py) on line 40.
 
 ### Real-time System
 
 1. Open [ToothDrilling.py](./Real-Time-System/python-scripts/ToothDrilling.py) and Real-Time-System project in Unity. Make sure the paths of the ROM files are correct.
-2. Start Holographic Remoting App on hololens and input this address into the Unity project (Mixed Reality -> Remoting -> Holographic Remoting for Play Mode -> Remote Host Name).
-3. Run [ToothDrilling.py](./Real-Time-System/python-scripts/ToothDrilling.py) first and then click `Play` button in Unity. The program will run if the markers on Hololens and Tooth are in the NDI camera range.
-4. When the virtual projection is stable, click keyboard `K`, and then you can let the markers on Hololens out of the camera range. But this time, you need to keep the markers on tooth model and dental handpiece in the range of camera. Then, you can enjoy the simulation of dental drilling!
+2. Start the Holographic Remoting App on Hololens and input this address into the Unity project (Mixed Reality -> Remoting -> Holographic Remoting for Play Mode -> Remote Host Name).
+3. Run [ToothDrilling.py](./Real-Time-System/python-scripts/ToothDrilling.py) first, then click the `Play` button in Unity. The program will run if the markers on Hololens and Tooth are in the NDI camera range.
+4. When the virtual projection is stable, click the keyboard `K`, and then you can let the markers on Hololens out of the camera range. But this time, you need to keep the markers on the tooth model and dental handpiece in the range of the camera. Then, you can enjoy the simulation of dental drilling!
 
 
 ## Citation
