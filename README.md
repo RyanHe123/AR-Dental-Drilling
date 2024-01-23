@@ -52,7 +52,7 @@ Each project includes a `python-scripts` folder containing Python code that need
 ### Calibration
 
 1. Open [HololensCalibration.py](./Calibration/python-scripts/HololensCalibration.py). Make sure the paths of the ROM files are correct, and modify the HOST IP on line 18 to the IP address of your PC.
-2. Open the Calibration project in Unity and modify the IP address in [DataReceiver.cs](./Calibration/Assets/DataStreaming.cs) on line 16.
+2. Open the Calibration project in Unity, open the `TrackingSample` scene, and modify the IP address in the Inspector window under the GameObject `MixedRealityPlayspace -> SampleTool`.
 3. Build and deploy the project on the Hololens.
 4. Remember to run the [HololensCalibration.py](./Calibration/python-scripts/HololensCalibration.py) first and run the Calibration project on Hololens.
 5. When you see stable tracking of the tooth model, you can keep pressing the keyboard `K` to start recording transformation information until a `Recording` is printed in the terminal. If you want to stop collecting data, press the keyboard `Q`. The script will print the output transformation you can directly paste into [ToothDrilling.py](./Real-Time-System/python-scripts/ToothDrilling.py) on line 40.
